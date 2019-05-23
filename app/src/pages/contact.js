@@ -1,0 +1,61 @@
+import React from "react"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+import routeStyle from "../styles/route.module.css"
+import contactStyle from "../styles/contact.module.css"
+
+const SocialMedia = () => (
+  <Layout showHeader={true}>
+    <SEO title="Contact" />
+    <h1 className={routeStyle.header}>How Can We Help?</h1>
+    <form
+      className={contactStyle.contactForm}
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input
+        className={contactStyle.contactInput}
+        type="hidden"
+        name="bot-field"
+      />
+      <label className={contactStyle.contactLabel} htmlFor="name">
+        Name
+      </label>
+      <input
+        className={contactStyle.contactInput}
+        type="text"
+        name="name"
+        id="name"
+      />
+      <label className={contactStyle.contactLabel} htmlFor="email">
+        Email
+      </label>
+      <input
+        className={contactStyle.contactInput}
+        type="text"
+        name="email"
+        id="email"
+      />
+      <label className={contactStyle.contactLabel} htmlFor="message">
+        Message
+      </label>
+      <textarea
+        className={contactStyle.contactTextarea}
+        name="message"
+        id="message"
+        rows="6"
+      />
+      <input
+        className={contactStyle.contactSend}
+        type="submit"
+        value="Send Message"
+      />
+    </form>
+  </Layout>
+)
+
+export default SocialMedia

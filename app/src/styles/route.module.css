@@ -1,0 +1,32 @@
+.header {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 0px;
+}
+
+.subheader {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 50px;
+  color: #afb9bb;
+}
+
+.contactUs {
+  display: block;
+  margin: 80px auto 0px;
+  padding: 5px 20px;
+  background-color: #5c2d33;
+  border: 2px solid #b5c2c4;
+  border-radius: 8px;
+  color: #b5c2c4;
+  transition: background-color 100ms linear;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contactUs:hover {
+  cursor: pointer;
+  background-color: #b5c2c4;
+  color: #5c2d33;
+}

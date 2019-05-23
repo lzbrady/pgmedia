@@ -1,0 +1,48 @@
+.videoContainer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 28vh;
+}
+
+.videoTextContainer {
+    margin-top: 80vh;
+    text-align: center;
+    width: 100%;
+}
+
+.videoTextLeft,
+.videoTextMiddle,
+.videoTextRight {
+    text-align: left;
+    display: inline-block;
+    height: 60px;
+}
+
+.videoTextLeft {
+    vertical-align: top;
+}
+
+.videoTextMiddle {
+    padding: 0px 5px;
+    font-size: 35px;
+    color: rgb(193, 69, 69);
+}
+
+.videoIcon img {
+    width: 50px;
+    background-color: white;
+    border-radius: 100%;
+    padding: 5px;
+    height: 50px;
+    margin: -10px 10px;
+}
+
+.videoTitle {
+    text-decoration: underline;
+    margin: 35px auto 5px;
+}
+
+.videoDesc {
+    color: #afb9bb;
+}
