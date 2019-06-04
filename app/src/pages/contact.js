@@ -23,7 +23,7 @@ const SocialMedia = () => (
         `indianapolis`,
       ]}
     />
-    <h1 className={routeStyle.header}>How Can We Help?</h1>
+    <h1 className={routeStyle.header}>Let's Make Something Great Together</h1>
     <form
       className={contactStyle.contactForm}
       name="contact"

@@ -58,19 +58,19 @@ const IndexPage = () => (
                 <span className={indexStyles.subtitle}>Media Solutions</span>
               </h1>
               <Link className={indexStyles.link} to="/websites/">
-                Websites
+                Websites<span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/graphics/">
-                Graphics
+                Graphics<span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/videos/">
-                Videos
+                Videos<span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/social-media/">
-                Social Media
+                Social Media<span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/contact/">
-                Contact Us
+                Contact Us<span className={indexStyles.arrowHover} />
               </Link>
             </Layout>
           </BackgroundImage>

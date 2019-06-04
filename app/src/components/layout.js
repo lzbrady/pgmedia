@@ -30,19 +30,17 @@ const Layout = ({ children, showHeader }) => (
           <main
             style={{
               margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0px 1.0875rem 1.45rem`,
+              maxWidth: 720,
+              padding: `1.0875rem 1.45rem`,
               paddingTop: 0,
             }}
           >
             {children}
           </main>
-          <footer style={{ textAlign: "center", padding: "15px" }}>
-            © {new Date().getFullYear()}, Contact
-            {` `}
-            <a href="mailto:lzbrady496@gmail.com" style={{ color: "white" }}>
-              lzbrady496@gmail.com
-            </a>
+          <footer
+            style={{ textAlign: "center", padding: "15px", fontSize: "12px" }}
+          >
+            © {new Date().getFullYear()} | Indianapolis, IN
           </footer>
         </div>
       </>

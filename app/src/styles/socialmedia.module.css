@@ -1,0 +1,17 @@
+.text {
+}
+
+.newSection {
+  border-top: 1px solid;
+  margin-top: 44px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.centerSection {
+  text-align: center;
+}
+
+.centerSection h3 {
+  color: #658faa;
+}

@@ -9,7 +9,7 @@ import headerStyles from "../styles/header.module.css"
 
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
-    <Logo style={{ width: "40px" }} />
+    {/* <Logo style={{ width: "40px" }} /> */}
     <div className={headerStyles.headerContainer}>
       <h1 className={headerStyles.headerTitle}>
         <Link to="/">{siteTitle}</Link>
