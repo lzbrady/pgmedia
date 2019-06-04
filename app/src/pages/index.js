@@ -38,7 +38,20 @@ const IndexPage = () => (
           >
             <Particles width="100%" height="40vh" />
             <Layout showHeader={false}>
-              <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+              <SEO
+                title="PG Media"
+                keywords={[
+                  `custom`,
+                  `website`,
+                  `graphics`,
+                  `video`,
+                  `production`,
+                  `social`,
+                  `media`,
+                  `indiana`,
+                  `indianapolis`,
+                ]}
+              />
               <h1 className={indexStyles.title}>
                 Pretty Good
                 <br />

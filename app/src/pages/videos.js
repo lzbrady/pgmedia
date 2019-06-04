@@ -37,7 +37,10 @@ const highlightedWork = [
 
 const Videos = () => (
   <Layout showHeader={true}>
-    <SEO title="Websites" />
+    <SEO
+      title="Custom Videos"
+      keywords={[`custom`, `video`, `production`, `indiana`, `indianapolis`]}
+    />
     <h1 className={routeStyle.header}>Custom Video Production</h1>
     <div
       className={videoStyle.videoContainer}

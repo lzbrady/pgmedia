@@ -24,7 +24,10 @@ const highlightedWork = [
 
 const SocialMedia = () => (
   <Layout showHeader={true}>
-    <SEO title="Graphics" />
+    <SEO
+      title="Custom Social Media"
+      keywords={[`custom`, `social`, `media`, `indiana`, `indianapolis`]}
+    />
     <h1 className={routeStyle.header}>Social Media</h1>
     <p className={routeStyle.subheader}>
       Increase your online presence with a strong social media game.

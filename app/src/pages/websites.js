@@ -41,7 +41,10 @@ const highlightedWork = [
 
 const Websites = () => (
   <Layout showHeader={true}>
-    <SEO title="Websites" />
+    <SEO
+      title="Custom Websites"
+      keywords={[`custom`, `website`, `indiana`, `indianapolis`]}
+    />
     <h1 className={routeStyle.header}>Custom Website Design and Development</h1>
     <p className={routeStyle.subheader}>
       The internet is complicated. Owning a website doesn't have to be.

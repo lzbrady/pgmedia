@@ -8,7 +8,21 @@ import contactStyle from "../styles/contact.module.css"
 
 const SocialMedia = () => (
   <Layout showHeader={true}>
-    <SEO title="Contact" />
+    <SEO
+      title="Contact"
+      keywords={[
+        `custom`,
+        `website`,
+        `graphics`,
+        `video`,
+        `production`,
+        `social`,
+        `media`,
+        `contact`,
+        `indiana`,
+        `indianapolis`,
+      ]}
+    />
     <h1 className={routeStyle.header}>How Can We Help?</h1>
     <form
       className={contactStyle.contactForm}

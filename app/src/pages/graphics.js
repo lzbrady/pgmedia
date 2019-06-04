@@ -25,7 +25,10 @@ const highlightedWork = [
 
 const Graphics = () => (
   <Layout showHeader={true}>
-    <SEO title="Graphics" />
+    <SEO
+      title="Custom Graphics"
+      keywords={[`custom`, `graphics`, `indiana`, `indianapolis`]}
+    />
     <h1 className={routeStyle.header}>Custom Graphic Design</h1>
     <p className={routeStyle.subheader}>
       What can we make? ...anything you want.
