@@ -1,12 +1,13 @@
 .title {
-    margin-bottom: 0px;
+  margin-bottom: 15px;
 }
 
 .desc {
-    margin: 0px auto 20px;
-    color: #afb9bb;
-    font-style: italic;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 0px 10px;
+  margin: 0px auto 30px;
+  color: #afb9bb;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0px 10px 15px;
+  border-bottom: 1px solid #5a5a5a;
 }

@@ -1,27 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Highlights from "../components/highlights/hightlights"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import SocialMediaImage from "../components/socialMediaImage"
+
 import routeStyle from "../styles/route.module.css"
 import socialMediaStyle from "../styles/socialmedia.module.css"
-
-const highlightedWork = [
-  {
-    title: "Instagram",
-    imgSrcs: ["instagram.png"],
-  },
-  {
-    title: "Twitter",
-    imgSrcs: ["twitter.jpg"],
-  },
-  {
-    title: "Facebook",
-    imgSrcs: ["facebook.png"],
-  },
-]
 
 const SocialMedia = () => (
   <Layout showHeader={true}>
@@ -33,6 +19,7 @@ const SocialMedia = () => (
     <p className={routeStyle.subheader}>
       Increase your online presence with a strong social media game.
     </p>
+    <SocialMediaImage className={socialMediaStyle.socialMediaImage} />
     <div>
       <div className={socialMediaStyle.centerSection}>
         <h3 className={socialMediaStyle.text}>Every phone has it.</h3>
@@ -60,7 +47,23 @@ const SocialMedia = () => (
     <Link className={routeStyle.contactUs} to="/contact/">
       Contact Us
     </Link>
-    <Highlights highlightedWork={highlightedWork} />
+    <div className={socialMediaStyle.socialMediaLinksContainer}>
+      <img
+        className={socialMediaStyle.socialMediaLinkImage}
+        src={require(`../images/graphics/twitter.png`)}
+        alt={"Twitter"}
+      />
+      <img
+        className={socialMediaStyle.socialMediaLinkImage}
+        src={require(`../images/graphics/instagram.png`)}
+        alt={"Instagram"}
+      />
+      <img
+        className={socialMediaStyle.socialMediaLinkImage}
+        src={require(`../images/graphics/facebook.png`)}
+        alt={"Facebook"}
+      />
+    </div>
   </Layout>
 )
 

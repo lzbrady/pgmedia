@@ -23,18 +23,22 @@
 
 .contactSend {
   display: block;
-  margin: 20px auto;
+  margin: 50px auto 0px;
   padding: 5px 20px;
-  background-color: #5c2d33;
-  border: 2px solid #b5c2c4;
-  color: #b5c2c4;
-  transition: background-color 100ms linear;
+  border: 2px solid #fe5f55;
+  background-color: #fe5f55;
   border-radius: 8px;
-  transition: background-color 200ms linear;
+  color: #5c2d33;
+  transition: background-color 100ms linear;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .contactSend:hover {
   cursor: pointer;
-  background-color: #b5c2c4;
-  color: #5c2d33;
+  color: #fe5f55;
+  background-color: #5c2d33;
 }

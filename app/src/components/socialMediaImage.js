@@ -3,23 +3,15 @@ import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 
 function renderImage({ file }) {
-  return (
-    <Img
-      fluid={file.childImageSharp.fluid}
-      style={{
-        width: "75px",
-        margin: "auto",
-      }}
-    />
-  )
+  return <Img fluid={file.childImageSharp.fluid} />
 }
 
-const Logo = function(props) {
+const SocialMediaImage = function(props) {
   return (
     <StaticQuery
       query={graphql`
         query {
-          file(relativePath: { eq: "logo.png" }) {
+          file(relativePath: { eq: "graphics/social_media.png" }) {
             childImageSharp {
               fluid(maxWidth: 1000) {
                 ...GatsbyImageSharpFluid
@@ -33,4 +25,4 @@ const Logo = function(props) {
   )
 }
 
-export default Logo
+export default SocialMediaImage

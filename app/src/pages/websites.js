@@ -49,6 +49,9 @@ const Websites = () => (
     <p className={routeStyle.subheader}>
       The internet is complicated. Owning a website doesn't have to be.
     </p>
+    <p style={{ margin: "60px auto", textAlign: "center" }}>
+      Custom web development. Based out of Indianapolis.
+    </p>
     <div className={websiteStyle.featuresWrapper}>
       <div className={websiteStyle.featureContainer}>
         <div className={websiteStyle.iconWrapper}>
@@ -74,7 +77,7 @@ const Websites = () => (
           <p className={websiteStyle.featureTitle}>Lead Generation</p>
           <p className={websiteStyle.featureDesc}>
             Your website should work for you, not just sit around and grow
-            cobwebs. We'll turn your website visitors turn into leads, so you
+            cobwebs. We'll help turn your website visitors into leads, so you
             can turn them into customers.
           </p>
         </div>

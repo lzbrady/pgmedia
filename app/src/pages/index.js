@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import { graphql, StaticQuery } from "gatsby"
 import Particles from "react-particles-js"
+
+import BackgroundImage from "gatsby-background-image"
+import Logo from "../components/logo"
+import logo from "../images/svg/logo.svg"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -52,25 +55,38 @@ const IndexPage = () => (
                   `indianapolis`,
                 ]}
               />
-              <h1 className={indexStyles.title}>
-                Pretty Good
-                <br />
-                <span className={indexStyles.subtitle}>Media Solutions</span>
-              </h1>
+              <div className={indexStyles.topContainer}>
+                <img
+                  src={logo}
+                  alt="Pretty Good Media"
+                  width="75"
+                  height="75"
+                />
+                <h1 className={indexStyles.title}>
+                  Pretty Good
+                  <br />
+                  <span className={indexStyles.subtitle}>Media Solutions</span>
+                </h1>
+              </div>
               <Link className={indexStyles.link} to="/websites/">
-                Websites<span className={indexStyles.arrowHover} />
+                Websites
+                <span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/graphics/">
-                Graphics<span className={indexStyles.arrowHover} />
+                Graphics
+                <span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/videos/">
-                Videos<span className={indexStyles.arrowHover} />
+                Videos
+                <span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/social-media/">
-                Social Media<span className={indexStyles.arrowHover} />
+                Social Media
+                <span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/contact/">
-                Contact Us<span className={indexStyles.arrowHover} />
+                Contact Us
+                <span className={indexStyles.arrowHover} />
               </Link>
             </Layout>
           </BackgroundImage>

@@ -1,17 +1,42 @@
 .header {
   background: linear-gradient(
-    to top right,
+    to right,
     #08001f 0%,
-    #304751 40%,
-    #5f2b31 100%
+    #304751 25%,
+    #5f2b31 50%,
+    #304751 75%,
+    #08001f 100%
   );
+  background-size: 200% 100%;
+  background-position: top left;
   margin-bottom: 1.45rem;
   position: relative;
+  animation: Gradient 10s ease-in-out 0s infinite;
+  min-height: 60px;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.headerIcon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
 .headerContainer {
   margin: 0 auto;
-  max-width: 960px;
   padding: 5px 0px;
 }
 
@@ -19,7 +44,7 @@
   margin: 0px;
   width: 80vw;
   font-variant-caps: petite-caps;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 
 .headerTitle a {
@@ -39,5 +64,10 @@
     margin-left: 0px;
     text-align: center;
     padding-top: 40px;
+  }
+
+  .headerIcon {
+    left: 5px;
+    top: 5px;
   }
 }

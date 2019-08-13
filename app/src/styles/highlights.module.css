@@ -1,12 +1,14 @@
 .container {
   display: inline-block;
   width: 30%;
-  min-width: 280px;
+  min-width: 200px;
   margin: 1%;
   border-top: 1px solid rgba(91, 45, 51, 0.5);
   border-radius: 13px;
   box-shadow: 0px 6px 16px rgba(91, 45, 51, 0.5);
   padding: 7px;
+  vertical-align: "top";
+  margin-top: 40px;
 }
 
 .container:hover {

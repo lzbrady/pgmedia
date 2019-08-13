@@ -13,20 +13,22 @@
 
 .contactUs {
   display: block;
-  margin: 80px auto 0px;
+  margin: 100px auto 0px;
   padding: 5px 20px;
-  background-color: #5c2d33;
-  border: 2px solid #b5c2c4;
+  border: 2px solid #fe5f55;
+  background-color: #fe5f55;
   border-radius: 8px;
-  color: #b5c2c4;
+  color: #5c2d33;
   transition: background-color 100ms linear;
   width: 250px;
   text-align: center;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .contactUs:hover {
   cursor: pointer;
-  background-color: #b5c2c4;
-  color: #5c2d33;
+  color: #fe5f55;
+  background-color: #5c2d33;
 }
