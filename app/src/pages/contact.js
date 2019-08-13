@@ -26,11 +26,12 @@ const SocialMedia = () => (
     <h1 className={routeStyle.header}>Let's Make Something Great Together</h1>
     <form
       className={contactStyle.contactForm}
-      name="contact"
+      name="contact-form"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
+      <input type="hidden" name="form-name" value="contact-form" />
       <input
         className={contactStyle.contactInput}
         type="hidden"
