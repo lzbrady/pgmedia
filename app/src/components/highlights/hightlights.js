@@ -57,8 +57,6 @@ class Highlights extends React.Component {
                 className={highlightsStyles.container}
                 onClick={() => this.showDetail(highlight)}
               >
-                <p className={highlightsStyles.title}>{highlight.title}</p>
-                <p className={highlightsStyles.desc}>{highlight.desc}</p>
                 {highlight.imgSrcs && (
                   <img
                     className={highlightsStyles.thumbnail}
@@ -68,6 +66,10 @@ class Highlights extends React.Component {
                     alt={highlight.title}
                   />
                 )}
+                <div className={highlightsStyles.containerText}>
+                  <p className={highlightsStyles.title}>{highlight.title}</p>
+                  <p className={highlightsStyles.desc}>{highlight.desc}</p>
+                </div>
               </div>
             )
         )}

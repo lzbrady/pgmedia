@@ -53,11 +53,16 @@ const SocialMedia = () => (
         src={require(`../images/graphics/twitter.png`)}
         alt={"Twitter"}
       />
-      <img
-        className={socialMediaStyle.socialMediaLinkImage}
-        src={require(`../images/graphics/instagram.png`)}
-        alt={"Instagram"}
-      />
+      <a
+        className={socialMediaStyle.socialMediaLink}
+        href="https://www.instagram.com/pretty_good_media/"
+      >
+        <img
+          className={socialMediaStyle.socialMediaLinkImage}
+          src={require(`../images/graphics/instagram.png`)}
+          alt={"Instagram"}
+        />
+      </a>
       <img
         className={socialMediaStyle.socialMediaLinkImage}
         src={require(`../images/graphics/facebook.png`)}

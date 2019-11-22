@@ -13,12 +13,11 @@
 
 .contactUs {
   display: block;
-  margin: 100px auto 0px;
+  margin: 100px auto;
   padding: 5px 20px;
   border: 2px solid #fe5f55;
-  background-color: #fe5f55;
-  border-radius: 8px;
-  color: #5c2d33;
+  background: none;
+  color: #fe5f55;
   transition: background-color 100ms linear;
   width: 250px;
   text-align: center;
@@ -29,6 +28,5 @@
 
 .contactUs:hover {
   cursor: pointer;
-  color: #fe5f55;
   background-color: #5c2d33;
 }

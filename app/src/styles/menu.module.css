@@ -19,8 +19,7 @@
 
 .menuIcon:hover {
   cursor: pointer;
-  background-color: #b5c2c4;
-  color: rgba(91, 45, 51);
+  background-color: rgb(231, 231, 231);
 }
 
 .menuItems {
@@ -39,12 +38,12 @@
 
 .menuItemsActive {
   position: fixed;
-  background-color: #b5c2c4;
+  background-color: #5b2d33;
   top: 0;
   height: 100vh;
   width: 30%;
   min-width: 200px;
-  border: 2px solid rgba(91, 45, 51);
+  border-left: 2px solid #b5c2c4;
   border-right: none;
   z-index: 100;
   transition: all 200ms linear;
@@ -56,26 +55,25 @@
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  color: rgba(91, 45, 51);
+  color: #b5c2c4;
   font-variant-caps: petite-caps;
 }
 
 .menuLink:hover {
-  background-color: rgba(91, 45, 51);
-  color: #b5c2c4;
+  background-color: #451f24;
   cursor: pointer;
 }
 
 .menuTitle {
-  color: rgba(91, 45, 51);
+  color: #b5c2c4;
   text-align: center;
   margin: 10px;
-  border-bottom: 1px solid rgba(91, 45, 51);
+  border-bottom: 1px solid #b5c2c4;
   font-variant-caps: petite-caps;
 }
 
 .menuClose {
-  color: rgba(91, 45, 51);
+  color: #b5c2c4;
   position: absolute;
   top: 5px;
   right: 5px;
@@ -83,7 +81,6 @@
   border: none;
   font-size: 20px;
   font-weight: bold;
-  border: 2px solid rgba(91, 45, 51);
   border-radius: 100%;
   width: 40px;
   height: 40px;
@@ -93,7 +90,7 @@
 
 .menuClose:hover {
   cursor: pointer;
-  background: #99a4a6;
+  background: #451f24;
 }
 
 @media only screen and (max-width: 667px) {

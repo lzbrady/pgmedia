@@ -3,6 +3,7 @@ module.exports = {
     title: `Pretty Good Media Solutions`,
     description: `Pretty Good Media Solutions, based out of Indianapolis, is a creative production company. We offer custom websites, graphics, video production, as well as social media solutions. Make the internet work for you.`,
     author: `Pretty Good Media`,
+    siteUrl: "https://www.pgmediasolutions.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

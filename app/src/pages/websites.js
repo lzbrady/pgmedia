@@ -14,15 +14,26 @@ import Phone from "../images/icons/phone_icon.png"
 
 const highlightedWork = [
   {
-    title: "1 a Week",
+    title: "Pretty Good Restaurant",
     desc:
-      "Non-profit charity organization promoting good deeds. Looking for a place for elementary school children to post about their good doing. Built in admin portal for managing website content.",
+      "This is an example website for a restaurant, showcasing what Pretty Good Media is capable of creating.",
     imgSrcs: [
-      "1aweek_home.png",
-      "1aweek_admin.png",
-      "1aweek_acts.png",
-      "1aweek_share.png",
-      "1aweek_logo.jpg",
+      "restaurant/home.png",
+      "restaurant/about.png",
+      "restaurant/menu.png",
+      "restaurant/private-events.png",
+      "restaurant/contact.png",
+    ],
+  },
+  {
+    title: "Wedding Website",
+    desc:
+      "A young couple preparing to get married wanted a website to help answer common questions people had, share helpful resources, and showcase their engagement photos to their families.",
+    imgSrcs: [
+      "aawebsite/home.png",
+      "aawebsite/location.png",
+      "aawebsite/registry.png",
+      "aawebsite/gallery.png",
     ],
   },
   {
