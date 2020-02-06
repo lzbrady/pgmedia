@@ -72,16 +72,8 @@ const IndexPage = () => (
                 Websites
                 <span className={indexStyles.arrowHover} />
               </Link>
-              <Link className={indexStyles.link} to="/graphics/">
-                Graphics
-                <span className={indexStyles.arrowHover} />
-              </Link>
               <Link className={indexStyles.link} to="/videos/">
                 Videos
-                <span className={indexStyles.arrowHover} />
-              </Link>
-              <Link className={indexStyles.link} to="/social-media/">
-                Social Media
                 <span className={indexStyles.arrowHover} />
               </Link>
               <Link className={indexStyles.link} to="/contact/">

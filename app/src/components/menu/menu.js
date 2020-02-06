@@ -41,14 +41,8 @@ class Menu extends React.Component {
           <Link to="/websites/" className={menuStyle.menuLink}>
             Websites
           </Link>
-          <Link to="/graphics/" className={menuStyle.menuLink}>
-            Graphics
-          </Link>
           <Link to="/videos/" className={menuStyle.menuLink}>
             Videos
-          </Link>
-          <Link to="/social-media/" className={menuStyle.menuLink}>
-            Social Media
           </Link>
           <Link to="/contact/" className={menuStyle.menuLink}>
             Contact

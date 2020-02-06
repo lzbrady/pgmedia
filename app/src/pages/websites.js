@@ -14,9 +14,9 @@ import Phone from "../images/icons/phone_icon.png"
 
 const highlightedWork = [
   {
-    title: "Pretty Good Restaurant",
+    title: "Restaurants",
     desc:
-      "This is an example website for a restaurant, showcasing what Pretty Good Media is capable of creating.",
+      "Show off your cuisine with a graphics heavy website to get the user to get a sense of the type of food you are offering. Display your menu, wine offerings, deserts, and anything else your restaurant offers to set you apart.",
     imgSrcs: [
       "restaurant/home.png",
       "restaurant/about.png",
@@ -26,9 +26,9 @@ const highlightedWork = [
     ],
   },
   {
-    title: "Wedding Website",
+    title: "Weddings",
     desc:
-      "A young couple preparing to get married wanted a website to help answer common questions people had, share helpful resources, and showcase their engagement photos to their families.",
+      "Help relieve some of the stress involved in planning a wedding by having a website to answer common questions people have, share helpful resources, and showcase your engagement photos to your families.",
     imgSrcs: [
       "aawebsite/home.png",
       "aawebsite/location.png",
@@ -37,15 +37,15 @@ const highlightedWork = [
     ],
   },
   {
-    title: "Aytch",
+    title: "Musicians",
     desc:
-      "Local Boston musician making hip-hop. Looking for a website to direct traffic to learn about himself, and spread his new music, videos, and upcoming events.",
+      "Becoming a successful musician involves a lot of promoting yourself and networking. Having a website can centralize your resources, so new contacts have one place where they can hear your music, watch your videos, and keep up with your social media and upcoming events.",
     imgSrcs: ["aytch_home.png", "aytch_music.png", "aytch_social.png"],
   },
   {
-    title: "B&B Home Design and Improvement",
+    title: "Small Businesses",
     desc:
-      "Connecticut contractor who owns a home improvement business. Looking to increase lead acquisition through SEO, and showcase his work.",
+      "Small businesses rely on creating a network. Having a website for your small business is a great way to get clients and contacts to easily connect with you and see what kind of work your company is capable of producing. Creating a professional website is a great way to set yourself apart from your competition.",
     imgSrcs: ["bb_home.png", "bb_services.png", "bb_testimonials.png"],
   },
 ]

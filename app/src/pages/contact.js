@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import routeStyle from "../styles/route.module.css"
 import contactStyle from "../styles/contact.module.css"
 
-const SocialMedia = () => (
+const Contact = () => (
   <Layout showHeader={true}>
     <SEO
       title="Contact"
@@ -73,4 +73,4 @@ const SocialMedia = () => (
   </Layout>
 )
 
-export default SocialMedia
+export default Contact
