@@ -1,0 +1,16 @@
+<svg width="100%" height="100%" viewBox="0 0 100 100" 
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+       <stop offset="70%" stop-color="rgba(91, 45, 51)"></stop>
+       <stop offset="90%" stop-color="#ffffff"></stop>
+    </linearGradient>
+    </defs>
+    
+    <circle cx="50%" cy="50%" r="40%" stroke-width="4" fill="black" stroke="url(#bgGrad)">
+      <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="4s" additive="sum" repeatCount="indefinite" />
+    </circle>
+    <text x="25%" y="60%" fill="white" font-size="2em" textLength="50%" font-family="sans-serif">PG</text>
+    Pretty Good
+</svg> 

@@ -16,8 +16,27 @@
   },
   "license": "0BSD",
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-gatsby": "^0.9.1",
+    "d3-ease": "^2.0.0",
     "gatsby": "^2.26.1",
+    "gatsby-background-image": "^1.3.1",
+    "gatsby-image": "^2.8.0",
+    "gatsby-plugin-anchor-links": "^1.2.0",
+    "gatsby-plugin-postcss": "^3.4.0",
+    "gatsby-plugin-react-helmet": "^3.7.0",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.11.2",
+    "gatsby-plugin-styled-components": "^3.7.0",
+    "gatsby-source-filesystem": "^2.8.1",
+    "gatsby-transformer-json": "^2.8.0",
+    "gatsby-transformer-sharp": "^2.9.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-move": "^6.4.0",
+    "react-particles-js": "^3.4.1",
+    "styled-components": "^5.2.1"
   }
 }
