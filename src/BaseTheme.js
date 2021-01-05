@@ -5,6 +5,11 @@ export const colors = {
   accent: '#EF233C',
   accentDark: '#D90429',
 
+  text: {
+    light: '#ffffff',
+    dark: '#000000',
+  },
+
   alpha: {
     primary: 'rgba(237, 242, 244, x)',
     primaryDark: 'rgba(43, 45, 66, x)',
@@ -12,7 +17,7 @@ export const colors = {
     accent: 'rgba(239, 35, 60, x)',
     accentDark: 'rgba(217, 4, 41, x)',
   },
-}
+};
 
 export const shadows = {
   primary: `
@@ -20,10 +25,13 @@ export const shadows = {
   `,
 
   hover: {
-    primary: `
-      box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.56);
+    subtleLight: `
+      box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.3);
+    `,
+    subtleDark: `
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
     `,
   },
-}
+};
 
-export default { colors, shadows }
+export default { colors, shadows };

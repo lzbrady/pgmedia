@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { Link, useStaticQuery } from 'gatsby'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
-import Img from 'gatsby-image'
-import styled, { css } from 'styled-components'
+import React, { useState } from 'react';
+import { Link, useStaticQuery } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import Img from 'gatsby-image';
+import styled, { css } from 'styled-components';
 
-import MenuIcon from 'components/header/MenuIcon'
+import MenuIcon from 'components/header/MenuIcon';
 
-import { colors } from 'BaseTheme'
+import { colors } from 'BaseTheme';
 
-const MOBILE_MENU_THRESHOLD = 870
+const MOBILE_MENU_THRESHOLD = 870;
 
 export default function Header({ scrollPosition }) {
   const data = useStaticQuery(graphql`
@@ -21,8 +21,8 @@ export default function Header({ scrollPosition }) {
         }
       }
     }
-  `)
-  const [isMenuExpanded, setIsMenuExpanded] = useState(false)
+  `);
+  const [isMenuExpanded, setIsMenuExpanded] = useState(false);
 
   return (
     <Container>
@@ -32,7 +32,7 @@ export default function Header({ scrollPosition }) {
             <Logo fixed={data.logo.childImageSharp.fixed} />
           </LogoContainer>
 
-          <Title>AYTCH</Title>
+          <Title>Pretty Good Media</Title>
         </TitleContainer>
       </Link>
 
@@ -44,10 +44,9 @@ export default function Header({ scrollPosition }) {
       />
 
       <Menu isExpanded={isMenuExpanded}>
-        <MenuItemAnchor to="/#music">Music</MenuItemAnchor>
-        <MenuItemAnchor to="/#video">Videos</MenuItemAnchor>
-        <MenuItemAnchor to="/#production">Production</MenuItemAnchor>
-        <MenuItemLink to="/beats">Beats</MenuItemLink>
+        <MenuItemAnchor to="/#weddings">Weddings</MenuItemAnchor>
+        <MenuItemAnchor to="/#films">Films</MenuItemAnchor>
+        <MenuItemAnchor to="/#about">About</MenuItemAnchor>
         <MenuItemLink to="/contact">Contact</MenuItemLink>
       </Menu>
     </Container>
@@ -67,17 +66,15 @@ const Container = styled.div`
   z-index: 9999;
   background-color: ${colors.primaryDark};
   justify-content: space-between;
-  ${'' /* background-color: ${props =>
-    colors.alpha.primaryDark.replace('x', props.scrollPosition / 500)}; */}
 
   a {
     text-decoration: none;
   }
-`
+`;
 
-const Logo = styled(props => <Img {...props} />)`
+const Logo = styled((props) => <Img {...props} />)`
   border-radius: 50px;
-`
+`;
 
 const LogoContainer = styled.div`
   width: 54px;
@@ -90,7 +87,7 @@ const LogoContainer = styled.div`
   border: 3px solid transparent;
   box-sizing: border-box;
   z-index: 200;
-`
+`;
 
 const Menu = styled.div`
   display: flex;
@@ -104,12 +101,12 @@ const Menu = styled.div`
   @media screen and (max-width: ${MOBILE_MENU_THRESHOLD}px) {
     flex-direction: column;
     position: absolute;
-    top: ${props => (props.isExpanded ? '80px' : '-220px')};
+    top: ${(props) => (props.isExpanded ? '80px' : '-220px')};
     left: 0;
     right: 0;
     background-color: ${colors.primaryDark};
   }
-`
+`;
 
 const menuItemStyle = css`
   flex: 1;
@@ -124,23 +121,23 @@ const menuItemStyle = css`
     color: ${colors.primary};
     border-color: ${colors.primary};
   }
-`
+`;
 
-const MenuItemAnchor = styled(props => <AnchorLink {...props} />)`
+const MenuItemAnchor = styled((props) => <AnchorLink {...props} />)`
   ${menuItemStyle}
-`
+`;
 
-const MenuItemLink = styled(props => <Link {...props} />)`
+const MenuItemLink = styled((props) => <Link {...props} />)`
   ${menuItemStyle}
-`
+`;
 
-const StyledMenuIcon = styled(props => <MenuIcon {...props} />)`
+const StyledMenuIcon = styled((props) => <MenuIcon {...props} />)`
   display: none;
 
   @media screen and (max-width: ${MOBILE_MENU_THRESHOLD}px) {
     display: flex;
   }
-`
+`;
 
 const Title = styled.h1`
   color: ${colors.primaryLight};
@@ -148,7 +145,7 @@ const Title = styled.h1`
   margin: 0px 20px;
   font-weight: normal;
   z-index: 200;
-`
+`;
 
 const TitleContainer = styled.div`
   display: flex;
@@ -161,4 +158,4 @@ const TitleContainer = styled.div`
       border-color: ${colors.primary};
     }
   }
-`
+`;
