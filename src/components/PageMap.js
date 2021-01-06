@@ -6,17 +6,12 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { colors, shadows } from 'BaseTheme';
 
 export default function PageMap({ sections }) {
-  /**
-   * title
-link
-icon
-   */
   return (
     <Container>
       {sections.map((section) => {
         return (
-          <LinkContainer>
-            <StyledLink isAnchor={section.link.includes('#')}>
+          <LinkContainer key={section.title}>
+            <StyledLink to={section.link} isAnchor={section.link.includes('#')}>
               <Icon>{section.icon}</Icon>
 
               <Text>{section.title}</Text>
@@ -52,7 +47,7 @@ const LinkContainer = styled.div`
 `;
 
 const Text = styled.p`
-  color: colors.text.dark;
+  color: colors.dark;
   margin: 4px;
 `;
 

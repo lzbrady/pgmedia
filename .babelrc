@@ -6,7 +6,8 @@
       {
         "root": ["./src"],
         "alias": {
-          "@icons": "./static/icons"
+          "@icons": "./static/icons",
+          "@images": "./static/images"
         }
       }
     ]

@@ -10,7 +10,7 @@ import { colors } from 'BaseTheme';
 
 const MOBILE_MENU_THRESHOLD = 870;
 
-export default function Header({ scrollPosition }) {
+export default function Header() {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       logo: file(relativePath: { eq: "logo.png" }) {
@@ -37,7 +37,7 @@ export default function Header({ scrollPosition }) {
       </Link>
 
       <StyledMenuIcon
-        fill={colors.primaryLight}
+        fill={colors.light}
         isExpanded={isMenuExpanded}
         onClick={() => setIsMenuExpanded((_isMenuExpanded) => !_isMenuExpanded)}
         size={48}
@@ -114,7 +114,7 @@ const menuItemStyle = css`
   text-align: center;
   padding: 6px 0px;
   box-sizing: border-box;
-  color: ${colors.primaryLight};
+  color: ${colors.light};
   border-bottom: 1px solid transparent;
 
   :hover {
@@ -140,7 +140,7 @@ const StyledMenuIcon = styled((props) => <MenuIcon {...props} />)`
 `;
 
 const Title = styled.h1`
-  color: ${colors.primaryLight};
+  color: ${colors.light};
   text-decoration: none;
   margin: 0px 20px;
   font-weight: normal;

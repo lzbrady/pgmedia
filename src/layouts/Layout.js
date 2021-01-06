@@ -38,9 +38,12 @@ const Body = styled.div`
 `;
 
 const Content = styled.div`
-  margin: '0px auto 0px';
-  max-width: '1366px';
-  padding-bottom: '100px';
+  margin: 0px auto 0px;
+  max-width: 960px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const SectionHeader = styled.div`

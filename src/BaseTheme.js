@@ -1,14 +1,11 @@
 export const colors = {
-  primary: '#8D99AE',
-  primaryDark: '#2B2D42',
-  primaryLight: '#EDF2F4',
-  accent: '#EF233C',
-  accentDark: '#D90429',
+  primary: '#89BEA3',
+  primaryDark: '#48635A',
+  accent: '#8787AB',
+  accentDark: '#2A0052',
 
-  text: {
-    light: '#ffffff',
-    dark: '#000000',
-  },
+  light: '#FFF3F0',
+  dark: '#000000',
 
   alpha: {
     primary: 'rgba(237, 242, 244, x)',

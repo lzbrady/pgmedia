@@ -37,6 +37,7 @@
     "react-helmet": "^6.1.0",
     "react-move": "^6.4.0",
     "react-particles-js": "^3.4.1",
+    "react-player": "^2.7.2",
     "styled-components": "^5.2.1"
   }
 }
