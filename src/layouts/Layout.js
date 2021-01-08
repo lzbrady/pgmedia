@@ -4,13 +4,14 @@ import BackgroundImage from 'gatsby-background-image';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import PageMap from 'components/PageMap';
 
 import 'layouts/Layout.css';
 
 import { colors } from 'BaseTheme';
 import { SMALL_SCREEN_SIZE } from 'constants';
 
-export default function Layout({ children, title, subtitle, imageData }) {
+export default function Layout({ children, imageData, pageMapSections, subtitle, title }) {
   return (
     <div>
       <Header />
@@ -25,6 +26,7 @@ export default function Layout({ children, title, subtitle, imageData }) {
       )}
 
       <Body>
+        {pageMapSections && <PageMap sections={pageMapSections} />}
         <Content>{children}</Content>
       </Body>
 
@@ -34,16 +36,19 @@ export default function Layout({ children, title, subtitle, imageData }) {
 }
 
 const Body = styled.div`
-  ${'' /* background-color: ${colors.primary}; */}
+  background-color: ${colors.light};
 `;
 
 const Content = styled.div`
   margin: 0px auto 0px;
   max-width: 960px;
-  padding-bottom: 100px;
+  padding: 20px 20px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
 `;
 
 const SectionHeader = styled.div`

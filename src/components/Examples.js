@@ -10,23 +10,32 @@ export default function Examples({ data, title = 'See Our Work' }) {
     <Container>
       <SectionHeader text="Needing a Video?" text={title} />
 
-      {data?.map((item, index) => {
-        return (
-          <Player
-            border={index < data.length - 1}
-            key={item.url}
-            title={item.title}
-            description={item.description}
-            tags={item.tags}
-            url={item.url}
-          />
-        );
-      })}
+      <PlayersContainer>
+        {data?.map((item, index) => {
+          return (
+            <Player
+              border={index < data.length - 1}
+              key={item.url}
+              title={item.title}
+              description={item.description}
+              tags={item.tags}
+              url={item.url}
+            />
+          );
+        })}
+      </PlayersContainer>
     </Container>
   );
 }
 
 const Container = styled.div`
-  max-width: 640px;
   margin-top: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const PlayersContainer = styled.div`
+  max-width: 640px;
 `;

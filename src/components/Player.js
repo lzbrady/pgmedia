@@ -20,7 +20,7 @@ export default function Player({ border, description, title, tags, url }) {
       {tags && (
         <Tags>
           {tags.map((tag) => {
-            return <Tag key={tag}>{tag}</Tag>;
+            return <Tag key={tag}>#{tag}</Tag>;
           })}
         </Tags>
       )}

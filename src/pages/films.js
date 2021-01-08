@@ -16,7 +16,7 @@ import Text from 'components/Text';
 import FilmTypes from 'components/films/FilmTypes';
 
 import { colors } from 'BaseTheme';
-import ServicesIcon from '@icons/play.svg';
+import ServicesIcon from '@icons/instagram.svg';
 
 export default function Films({}) {
   const data = useStaticQuery(graphql`
@@ -41,27 +41,28 @@ export default function Films({}) {
   `);
 
   return (
-    <Layout title={'Films'} subtitle={'the timeless storyteller'} imageData={data.background.childImageSharp.fluid}>
-      <PageMap
-        sections={[
-          {
-            title: 'Services',
-            link: '#services',
-            icon: <ServicesIcon width={24} height={24} />,
-          },
-          {
-            title: 'Get Started',
-            link: '#start',
-            icon: <ServicesIcon width={24} height={24} />,
-          },
-          {
-            title: 'Our Work',
-            link: '#work',
-            icon: <ServicesIcon width={24} height={24} />,
-          },
-        ]}
-      />
-
+    <Layout
+      title={'Films'}
+      subtitle={'the timeless storyteller'}
+      imageData={data.background.childImageSharp.fluid}
+      pageMapSections={[
+        {
+          title: 'Services',
+          link: '#services',
+          icon: <ServicesIcon width={24} height={24} />,
+        },
+        {
+          title: 'Get Started',
+          link: '#start',
+          icon: <ServicesIcon width={24} height={24} />,
+        },
+        {
+          title: 'Our Work',
+          link: '#work',
+          icon: <ServicesIcon width={24} height={24} />,
+        },
+      ]}
+    >
       <Player url="https://youtu.be/1RfiO0_PxOc" />
 
       <SectionHeader text="Needing a Video?" />
@@ -93,7 +94,6 @@ export default function Films({}) {
       <Button text="Contact Us" linkTo="/contact" containerStyle={{ margin: '80px auto 20px' }} />
       <StyledLink to="/contact">Read more about our process</StyledLink>
 
-      {/* {data?.allMusicJson?.nodes?.map(music => {})} */}
       <Examples data={data?.allFilmsJson?.nodes} />
     </Layout>
   );

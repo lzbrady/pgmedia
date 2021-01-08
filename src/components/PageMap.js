@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+
+import Text from 'components/Text';
 
 import { colors, shadows } from 'BaseTheme';
 
@@ -11,10 +12,10 @@ export default function PageMap({ sections }) {
       {sections.map((section) => {
         return (
           <LinkContainer key={section.title}>
-            <StyledLink to={section.link} isAnchor={section.link.includes('#')}>
+            <StyledLink to={section.link}>
               <Icon>{section.icon}</Icon>
 
-              <Text>{section.title}</Text>
+              <Text color={colors.accent}>{section.title}</Text>
             </StyledLink>
           </LinkContainer>
         );
@@ -29,7 +30,8 @@ const Container = styled.div`
   grid-gap: 20px;
   min-width: 280px;
   width: 60%;
-  margin: 20px auto;
+  padding: 40px 0px 60px;
+  margin: auto;
 `;
 
 const Icon = styled.div`
@@ -46,24 +48,18 @@ const LinkContainer = styled.div`
   justify-content: center;
 `;
 
-const Text = styled.p`
-  color: colors.dark;
-  margin: 4px;
-`;
-
-const StyledLink = styled((props) => (props.isAnchor ? <AnchorLink {...props} /> : <Link {...props} />))`
+const StyledLink = styled((props) => <AnchorLink {...props} />)`
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid transparent;
+  color: ${colors.accent};
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
 
   :hover {
     cursor: pointer;
-    border-color: ${colors.primary};
-
-    ${Icon} {
-      ${shadows.hover.subtleDark};
-    }
+    ${shadows.hover.subtleDark};
   }
 `;
