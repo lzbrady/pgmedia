@@ -46,7 +46,7 @@ export default function Header() {
       <Menu isExpanded={isMenuExpanded}>
         <MenuItemAnchor to="/weddings">Weddings</MenuItemAnchor>
         <MenuItemAnchor to="/films">Films</MenuItemAnchor>
-        <MenuItemAnchor to="/#about">About</MenuItemAnchor>
+        <MenuItemAnchor to="/about">About</MenuItemAnchor>
         <MenuItemLink to="/contact">Contact</MenuItemLink>
       </Menu>
     </Container>

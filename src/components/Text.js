@@ -33,7 +33,7 @@ export default function Text({ children, h1, h2, h3, center, color, fontSize, it
 }
 
 const StyledText = styled.p`
-  color: ${(props) => props.color || (props.light ? colors.light : props.heading ? colors.primary : colors.dark)};
+  color: ${(props) => props.color || (props.light ? colors.light : props.heading ? colors.accentDark : colors.dark)};
   ${(props) => props.center && 'text-align: center;'}
   ${(props) => props.margin && `margin: ${props.margin};`}
   ${(props) => props.fontSize && `font-size: ${props.fontSize}px;`}

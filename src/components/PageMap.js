@@ -8,7 +8,7 @@ import { colors, shadows } from 'BaseTheme';
 
 export default function PageMap({ sections }) {
   return (
-    <Container>
+    <Container numCols={sections.length}>
       {sections.map((section) => {
         return (
           <LinkContainer key={section.title}>
@@ -26,7 +26,7 @@ export default function PageMap({ sections }) {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: ${(props) => `repeat(${props.numCols}, 1fr)`};
   grid-gap: 20px;
   min-width: 280px;
   width: 60%;

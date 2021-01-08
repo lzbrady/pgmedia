@@ -12,7 +12,7 @@ export const colors = {
     primary: 'rgba(237, 242, 244, x)',
     primaryDark: 'rgba(43, 45, 66, x)',
     primaryLight: 'rgba(237, 242, 244, x)',
-    accent: 'rgba(239, 35, 60, x)',
+    accent: 'rgba(93, 66, 102, x)',
     accentDark: 'rgba(217, 4, 41, x)',
   },
 };
