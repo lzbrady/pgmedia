@@ -25,7 +25,7 @@ export default function Destination({}) {
     <StyledBackgroundImage Tag="section" fluid={data.image.childImageSharp.fluid} backgroundColor={colors.primary}>
       <TextContainer>
         <Text fontSize={36}>Destination Weddings</Text>
-        <Text fontSize={36}>We love to travel!</Text>
+        <Text fontSize={36}>Say something about extra cost here</Text>
       </TextContainer>
     </StyledBackgroundImage>
   );
@@ -42,7 +42,7 @@ const TextContainer = styled.div`
 const StyledBackgroundImage = styled((props) => <BackgroundImage {...props} />)`
   height: 40vh;
   width: calc(100% + 40px);
-  margin: 120px 0px;
+  margin-top: 120px;
 
   ::before,
   ::after {

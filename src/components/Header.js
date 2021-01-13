@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import Img from 'gatsby-image';
 import styled, { css } from 'styled-components';
@@ -7,21 +7,12 @@ import styled, { css } from 'styled-components';
 import MenuIcon from 'components/header/MenuIcon';
 
 import { colors } from 'BaseTheme';
+import LogoIcon from '@icons/logo.svg';
 
+const ABBREVIATED_TITLE_THRESHOLD = 520;
 const MOBILE_MENU_THRESHOLD = 870;
 
 export default function Header() {
-  const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      logo: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
 
   return (
@@ -29,10 +20,11 @@ export default function Header() {
       <Link to="/">
         <TitleContainer>
           <LogoContainer>
-            <Logo fixed={data.logo.childImageSharp.fixed} />
+            <LogoIcon width={50} height={50} />
           </LogoContainer>
 
-          <Title>Pretty Good Media</Title>
+          <Title />
+          {/* <Title>Pretty Good Media</Title> */}
         </TitleContainer>
       </Link>
 
@@ -70,10 +62,6 @@ const Container = styled.div`
   a {
     text-decoration: none;
   }
-`;
-
-const Logo = styled((props) => <Img {...props} />)`
-  border-radius: 50px;
 `;
 
 const LogoContainer = styled.div`
@@ -116,6 +104,7 @@ const menuItemStyle = css`
   box-sizing: border-box;
   color: ${colors.light};
   border-bottom: 1px solid transparent;
+  font-family: 'Source Sans Pro';
 
   :hover {
     color: ${colors.primary};
@@ -145,6 +134,17 @@ const Title = styled.h1`
   margin: 0px 20px;
   font-weight: normal;
   z-index: 200;
+  font-family: 'Montserrat';
+
+  ::before {
+    content: 'Pretty Good Media';
+  }
+
+  @media screen and (max-width: ${ABBREVIATED_TITLE_THRESHOLD}px) {
+    ::before {
+      content: 'PGM';
+    }
+  }
 `;
 
 const TitleContainer = styled.div`

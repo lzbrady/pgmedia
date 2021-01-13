@@ -61,8 +61,8 @@ export default function Weddings({}) {
       ]}
     >
       <DreamDay />
-      <Destination />
       <Pricing />
+      <Destination />
       <Examples data={data?.allWeddingsJson?.nodes} />
     </Layout>
   );

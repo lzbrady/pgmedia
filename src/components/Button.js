@@ -26,11 +26,12 @@ const StyledButton = styled((props) =>
   border: none;
   border-radius: 5px;
   background: ${colors.primary};
-  color: ${colors.light};
+  color: #ffffff;
   padding: 10px 40px;
-  transition: all 100ms ease;
+  transition: all 200ms ease;
   text-decoration: none;
   text-align: center;
+  font-size: 24px;
 
   :hover {
     cursor: pointer;

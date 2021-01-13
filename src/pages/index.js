@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Particles from 'react-particles-js';
 
 import SEO from 'components/seo';
-import logo from '@icons/logo.svg';
+import LogoIcon from '@icons/logo.svg';
 
 import { colors } from 'BaseTheme';
 import { SMALL_SCREEN_SIZE } from 'constants';
@@ -18,14 +18,6 @@ export default function Index() {
         childImageSharp {
           fluid(quality: 90, maxWidth: 4160) {
             ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      indexLogo: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 160, height: 160) {
-            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -61,7 +53,7 @@ export default function Index() {
         />
         <ContentContainer>
           <LogoContainer>
-            <Logo fixed={data.indexLogo.childImageSharp.fixed} />
+            <LogoIcon width={160} height={160} />
           </LogoContainer>
 
           <Title>Pretty Good Media</Title>
@@ -111,6 +103,7 @@ const MenuItemLink = styled((props) => <Link {...props} />)`
   color: white;
   border-bottom: 1px solid transparent;
   text-decoration: none;
+  font-family: 'Source Sans Pro';
 
   :hover {
     color: ${colors.primary};
@@ -122,7 +115,7 @@ const MenuOptions = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 8vh;
 `;
 
 const StyledBackgroundImage = styled((props) => <BackgroundImage {...props} />)`
@@ -133,8 +126,9 @@ const StyledBackgroundImage = styled((props) => <BackgroundImage {...props} />)`
 const Title = styled.h1`
   color: white;
   font-size: 48px;
+  font-family: 'Montserrat';
 
   @media screen and (max-width: ${SMALL_SCREEN_SIZE}) {
-    font-size: 36px;
+    font-size: 28px;
   }
 `;

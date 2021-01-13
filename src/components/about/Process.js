@@ -48,17 +48,19 @@ export default function Process({}) {
   return (
     <Container id="process">
       <SectionHeader text="Our Process" />
-      <Text margin="23px auto 0px" center>
-        Our process is designed around efficiency. Our background started in computer science and data science, so we
-        analyzed our own processes until we could streamline the process and strip away the nonsense. This is the
-        approach we follow.
-      </Text>
+      <TextContainer>
+        <Text margin="23px auto 0px">
+          Our process is designed around efficiency. Our background started in computer science and data science, so we
+          analyzed our own processes until we could streamline the process and strip away the nonsense. This is the
+          approach we follow.
+        </Text>
+      </TextContainer>
 
       <ProcessSteps>
         <ProcessStep
           title="Discovery"
           imageData={data.discovery.childImageSharp.fluid}
-          description="We start by meeting with the client to figure out what exactly we are trying to create here. This step alone can make or break any project and any budget."
+          description="We start by meeting with you to figure out exactly what we are trying to create. This step alone can make or break any project and any budget."
         />
         <ProcessStep
           title="Planning"
@@ -68,7 +70,7 @@ export default function Process({}) {
         <ProcessStep
           title="Production"
           imageData={data.production.childImageSharp.fluid}
-          description="Once we have the project planned out, time to make it happen. This is the most rewarding step, as you being to see your project and ideas come to life."
+          description="With the project planned out, time to make it happen. This is the most rewarding step, as you begin to see your project and ideas come to life."
         />
         <ProcessStep
           title="Distribution"
@@ -89,4 +91,9 @@ const ProcessSteps = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const TextContainer = styled.div`
+  width: 80%;
+  margin: auto;
 `;

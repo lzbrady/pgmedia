@@ -5,17 +5,21 @@ import styled from 'styled-components';
 import Text from 'components/Text';
 
 import { colors } from 'BaseTheme';
+import { MEDIUM_SCREEN_SIZE } from 'constants';
 
-export default function Player({ border, description, title, tags, url }) {
+export default function Player({ containerStyle, description, title, tags, url }) {
   return (
-    <Container border={border}>
+    <Container style={containerStyle}>
       {title && (
         <Text h3 fontSize={24} color={colors.accentDark}>
           {title}
         </Text>
       )}
       {description && <Text margin="20px 0px">{description}</Text>}
-      <ReactPlayer url={url} />
+
+      <PlayerContainer>
+        <StyledReactPlayer url={url} width={'100%'} height={'100%'} />
+      </PlayerContainer>
 
       {tags && (
         <Tags>
@@ -34,7 +38,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px 0px;
-  border-bottom: ${(props) => (props.border ? `1px solid ${colors.accent}` : 'none')};
+`;
+
+const PlayerContainer = styled.div`
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+`;
+
+const StyledReactPlayer = styled((props) => <ReactPlayer {...props} />)`
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const Tag = styled.p`

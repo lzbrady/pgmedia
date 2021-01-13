@@ -10,8 +10,8 @@ import Process from 'components/about/Process';
 import Examples from 'components/Examples';
 
 import { colors } from 'BaseTheme';
-import TravelIcon from '@icons/travel.svg';
-import PricingIcon from '@icons/pricing.svg';
+import TeamIcon from '@icons/team.svg';
+import ProcessIcon from '@icons/process.svg';
 
 export default function About({}) {
   const data = useStaticQuery(graphql`
@@ -35,12 +35,12 @@ export default function About({}) {
         {
           title: 'Our Team',
           link: '#team',
-          icon: <TravelIcon width={48} height={48} fill={colors.accent} />,
+          icon: <TeamIcon width={48} height={48} fill={colors.accent} />,
         },
         {
           title: 'Our Process',
           link: '#process',
-          icon: <PricingIcon width={48} height={48} fill={colors.accent} />,
+          icon: <ProcessIcon width={48} height={48} fill={colors.accent} />,
         },
       ]}
     >

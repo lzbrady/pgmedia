@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SectionHeader from 'components/SectionHeader';
 import Text from 'components/Text';
 
+import Button from 'components/Button';
 import PricingCard from 'components/pricing/PricingCard';
 
 import { colors } from 'BaseTheme';
@@ -38,7 +39,7 @@ export default function Pricing({}) {
         />
         <PricingCard
           points={['10-30 minute video*', '14 Hour Work Limit', '2nd Shooter', 'Custom Titles & Animations']}
-          price={100}
+          price={2200}
           title="Premium"
         />
       </PricingContainer>
@@ -46,6 +47,8 @@ export default function Pricing({}) {
       <Text margin="10px auto 0px" center italic>
         *Video length is approximate, not a hard cutoff. It can also be shorter than the allowed time, if desired.
       </Text>
+
+      <Button text="Check Availability" containerStyle={{ margin: '40px auto 0px' }} />
     </Container>
   );
 }
@@ -54,6 +57,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 120px;
 `;
 
 const PricingContainer = styled.div`

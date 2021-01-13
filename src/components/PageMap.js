@@ -28,9 +28,8 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.numCols}, 1fr)`};
   grid-gap: 20px;
-  min-width: 280px;
-  width: 60%;
-  padding: 40px 0px 60px;
+  max-width: ${(props) => `${props.numCols * 200}px`};
+  padding: 40px 10px 60px;
   margin: auto;
 `;
 
@@ -55,8 +54,10 @@ const StyledLink = styled((props) => <AnchorLink {...props} />)`
   align-items: center;
   color: ${colors.accent};
   background-color: white;
-  padding: 15px;
+  padding: 10px 5px;
   border-radius: 8px;
+  transition: all 200ms ease;
+  ${shadows.small};
 
   :hover {
     cursor: pointer;

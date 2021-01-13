@@ -45,5 +45,12 @@ module.exports = {
         path: `./src/data/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat`, `Source Sans Pro`],
+        display: 'swap',
+      },
+    },
   ],
 };

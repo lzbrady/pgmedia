@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import PageMap from 'components/PageMap';
+import Text from 'components/Text';
 
 import 'layouts/Layout.css';
 
@@ -19,13 +20,13 @@ export default function Layout({ children, imageData, pageMapSections, subtitle,
       {title && (
         <StyledBackgroundImage Tag="section" fluid={imageData} backgroundColor={`#040e18`}>
           <SectionHeader>
-            <SectionTitle>{title}</SectionTitle>
-            <SectionSubtitle>{subtitle}</SectionSubtitle>
+            <Text color={'#ffffff'} h1>{title}</Text>
+            <Text color={'#d4d4d4'} fontSize={24}>{subtitle}</Text>
           </SectionHeader>
         </StyledBackgroundImage>
       )}
 
-      <Body>
+      <Body offsetTop={!title}>
         {pageMapSections && <PageMap sections={pageMapSections} />}
         <Content>{children}</Content>
       </Body>
@@ -37,6 +38,7 @@ export default function Layout({ children, imageData, pageMapSections, subtitle,
 
 const Body = styled.div`
   background-color: ${colors.light};
+  ${(props) => props.offsetTop && 'padding-top: 160px;'}
 `;
 
 const Content = styled.div`

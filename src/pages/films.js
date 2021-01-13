@@ -16,7 +16,9 @@ import Text from 'components/Text';
 import FilmTypes from 'components/films/FilmTypes';
 
 import { colors } from 'BaseTheme';
-import ServicesIcon from '@icons/instagram.svg';
+import VideoIcon from '@icons/video.svg';
+import RocketIcon from '@icons/rocket.svg';
+import ReelIcon from '@icons/reel.svg';
 
 export default function Films({}) {
   const data = useStaticQuery(graphql`
@@ -49,17 +51,17 @@ export default function Films({}) {
         {
           title: 'Services',
           link: '#services',
-          icon: <ServicesIcon width={24} height={24} />,
+          icon: <VideoIcon width={48} height={48} fill={colors.accent} />,
         },
         {
           title: 'Get Started',
           link: '#start',
-          icon: <ServicesIcon width={24} height={24} />,
+          icon: <RocketIcon width={48} height={48} fill={colors.accent} />,
         },
         {
           title: 'Our Work',
           link: '#work',
-          icon: <ServicesIcon width={24} height={24} />,
+          icon: <ReelIcon width={48} height={48} fill={colors.accent} />,
         },
       ]}
     >

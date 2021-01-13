@@ -34,6 +34,7 @@ export default function Text({ children, h1, h2, h3, center, color, fontSize, it
 
 const StyledText = styled.p`
   color: ${(props) => props.color || (props.light ? colors.light : props.heading ? colors.accentDark : colors.dark)};
+  font-family: ${(props) => props.font || (props.heading ? 'Montserrat' : 'Source Sans Pro')};
   ${(props) => props.center && 'text-align: center;'}
   ${(props) => props.margin && `margin: ${props.margin};`}
   ${(props) => props.fontSize && `font-size: ${props.fontSize}px;`}

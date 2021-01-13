@@ -54,7 +54,6 @@ const RowContainer = styled.div`
 const StyledImg = styled((props) => <Img {...props} />)`
   flex: 2;
   min-width: 300px;
-  border-radius: 8px;
 `;
 
 const TextContainer = styled.div`

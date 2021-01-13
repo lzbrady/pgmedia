@@ -6,7 +6,7 @@ export const colors = {
   accentDark: '#2A0052',
 
   light: '#FFF3F0',
-  dark: '#000000',
+  dark: '#242424',
 
   alpha: {
     primary: 'rgba(237, 242, 244, x)',
@@ -23,6 +23,9 @@ export const shadows = {
   `,
   large: `
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  `,
+  small: `
+    box-shadow: 0px 1px 8px 0px ${colors.alpha.accent.replace('x', 0.2)};
   `,
 
   hover: {
