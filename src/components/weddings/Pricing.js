@@ -16,13 +16,12 @@ export default function Pricing({}) {
       <SectionHeader text="Elegant Wedding Videos. Simple Pricing." />
       <TextContainer>
         <Text>
-          Our packages are designed to not let the quality of the video suffer with our cheaper options. The same
-          equipment is used across the board. Rather, we work with you to figure out how to work with the time
-          associated with each package.
+          Our packages are designed to not let the quality of the video suffer with our cheaper options. We'll work with
+          you to figure out exactly what you are looking for.
         </Text>
         <Text margin="20px auto 0px">
-          Transparency is our goal here. Although we don’t charge by the hour, we try to keep the hourly wage about even
-          across each package. This means the cheaper the option, the less hours we have to put in to make it happen.
+          Transparency is our goal here. The biggest difference between our packages is the length of the video, and how
+          much of the day we capture. The shorter the video, the cheaper the package.
         </Text>
         <Text margin="60px auto 40px" fontSize={24} color={colors.accentDark} center>
           Same great quality, no matter the package.
@@ -30,16 +29,16 @@ export default function Pricing({}) {
       </TextContainer>
 
       <PricingContainer>
-        <PricingCard points={['3-6 minute video*', '8 Hour Work Limit', 'Single Shooter']} price={100} title="Basic" />
+        <PricingCard points={['3-6 minute video*', '8 Hour Day Limit', 'Single Shooter']} price={1000} title="Basic" />
         <PricingCard
           highlight
-          points={['7-10 minute video*', '10 Hour Work Limit', '2nd Shooter']}
-          price={100}
+          points={['7-10 minute video*', '10 Hour Day Limit', '2nd Shooter']}
+          price={1400}
           title="Value"
         />
         <PricingCard
-          points={['10-30 minute video*', '14 Hour Work Limit', '2nd Shooter', 'Custom Titles & Animations']}
-          price={2200}
+          points={['10-20 minute video*', '12 Hour Day Limit', '2nd Shooter', 'Custom Titles & Animations']}
+          price={1800}
           title="Premium"
         />
       </PricingContainer>

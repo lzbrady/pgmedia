@@ -23,19 +23,39 @@ export default function Destination({}) {
 
   return (
     <StyledBackgroundImage Tag="section" fluid={data.image.childImageSharp.fluid} backgroundColor={colors.primary}>
-      <TextContainer>
-        <Text fontSize={36}>Destination Weddings</Text>
-        <Text fontSize={36}>Say something about extra cost here</Text>
-      </TextContainer>
+      <ContentContainer>
+        <TextContainer>
+          <Text fontSize={36} center margin="0px auto 20px;">
+            Destination Weddings
+          </Text>
+          <Text fontSize={18} margin="0px auto 20px;">
+            We love seeing new locations, and know you chose to have a destination wedding because you do too. Scenery
+            is very important to us, especially when shooting destinations. The scenery will play a huge role in your
+            film so we can fully capture the beauty of your selected destination.
+          </Text>
+          <Text fontSize={18}>
+            We only require travel to and from to be provided or compensated. The rest of the pricing remains consistent
+            with our packages above. We encourage asking far in advance, as destination weddings typically require more
+            time around the wedding itself.
+          </Text>
+        </TextContainer>
+      </ContentContainer>
     </StyledBackgroundImage>
   );
 }
 
 const TextContainer = styled.div`
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(100% - 80px);
+`;
+
+const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 100%;
 `;
 

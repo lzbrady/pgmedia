@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import Img from 'gatsby-image';
 import styled, { css } from 'styled-components';
 
@@ -36,9 +35,9 @@ export default function Header() {
       />
 
       <Menu isExpanded={isMenuExpanded}>
-        <MenuItemAnchor to="/weddings">Weddings</MenuItemAnchor>
-        <MenuItemAnchor to="/films">Films</MenuItemAnchor>
-        <MenuItemAnchor to="/about">About</MenuItemAnchor>
+        <MenuItemLink to="/weddings">Weddings</MenuItemLink>
+        <MenuItemLink to="/films">Films</MenuItemLink>
+        <MenuItemLink to="/about">About</MenuItemLink>
         <MenuItemLink to="/contact">Contact</MenuItemLink>
       </Menu>
     </Container>
@@ -110,10 +109,6 @@ const menuItemStyle = css`
     color: ${colors.primary};
     border-color: ${colors.primary};
   }
-`;
-
-const MenuItemAnchor = styled((props) => <AnchorLink {...props} />)`
-  ${menuItemStyle}
 `;
 
 const MenuItemLink = styled((props) => <Link {...props} />)`

@@ -5,7 +5,7 @@ export const colors = {
   accent: '#5d4266',
   accentDark: '#2A0052',
 
-  light: '#FFF3F0',
+  light: '#f0f5ff',
   dark: '#242424',
 
   alpha: {

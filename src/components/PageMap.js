@@ -48,14 +48,16 @@ const LinkContainer = styled.div`
 `;
 
 const StyledLink = styled((props) => <AnchorLink {...props} />)`
+  width: 110px;
+  height: 110px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: ${colors.accent};
   background-color: white;
-  padding: 10px 5px;
-  border-radius: 8px;
+  padding: 10px;
+  border-radius: 110px;
   transition: all 200ms ease;
   ${shadows.small};
 

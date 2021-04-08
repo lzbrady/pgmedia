@@ -9,7 +9,7 @@ import { colors } from 'BaseTheme';
 
 export default function Examples({ data, title = 'See Our Work' }) {
   return (
-    <Container>
+    <Container id="work">
       <SectionHeader text={title} />
 
       <PlayersContainer>

@@ -39,8 +39,8 @@ export default function Weddings({}) {
 
   return (
     <Layout
-      title={'Your Wedding Video'}
-      subtitle={'for a day to remember'}
+      title={'Wedding Videos'}
+      subtitle={'to always remember your special day'}
       imageData={data.background.childImageSharp.fluid}
       pageMapSections={[
         {
