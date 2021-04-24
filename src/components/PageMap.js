@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import {AnchorLink} from 'gatsby-plugin-anchor-links';
 
 import Text from 'components/Text';
 
-import { colors, shadows } from 'BaseTheme';
+import {colors, shadows} from 'BaseTheme';
 
-export default function PageMap({ sections }) {
+export default function PageMap({sections}) {
   return (
     <Container numCols={sections.length}>
       {sections.map((section) => {
@@ -27,8 +27,8 @@ export default function PageMap({ sections }) {
 const Container = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.numCols}, 1fr)`};
-  grid-gap: 20px;
-  max-width: ${(props) => `${props.numCols * 200}px`};
+  grid-gap: 30px;
+  max-width: ${(props) => `${props.numCols * 150}px`};
   padding: 40px 10px 60px;
   margin: auto;
 `;
@@ -45,24 +45,34 @@ const Icon = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
+  background-color: white;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  ${shadows.small};
+  transition: all 200ms ease;
+
+  :hover {
+    ${shadows.hover.subtleDark};
+  }
 `;
 
 const StyledLink = styled((props) => <AnchorLink {...props} />)`
-  width: 110px;
-  height: 110px;
+  flex: 1;
+  align-self: baseline;
+  height: 0;
+  padding-bottom: 50%;
+  padding-top: 50%;
   text-decoration: none;
+  border-radius: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: ${colors.accent};
-  background-color: white;
-  padding: 10px;
-  border-radius: 110px;
-  transition: all 200ms ease;
-  ${shadows.small};
 
   :hover {
     cursor: pointer;
-    ${shadows.hover.subtleDark};
   }
 `;

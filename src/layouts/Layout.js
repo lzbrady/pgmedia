@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
+import Credit from 'components/Credit';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import PageMap from 'components/PageMap';
@@ -9,10 +10,10 @@ import Text from 'components/Text';
 
 import 'layouts/Layout.css';
 
-import { colors } from 'BaseTheme';
-import { SMALL_SCREEN_SIZE } from 'constants';
+import {colors} from 'BaseTheme';
+import {SMALL_SCREEN_SIZE} from 'constants';
 
-export default function Layout({ children, imageData, pageMapSections, subtitle, title }) {
+export default function Layout({children, credit, imageData, pageMapSections, subtitle, title}) {
   return (
     <div>
       <Header />
@@ -20,8 +21,14 @@ export default function Layout({ children, imageData, pageMapSections, subtitle,
       {title && (
         <StyledBackgroundImage Tag="section" fluid={imageData} backgroundColor={`#040e18`}>
           <SectionHeader>
-            <Text color={'#ffffff'} h1>{title}</Text>
-            <Text color={'#d4d4d4'} fontSize={24}>{subtitle}</Text>
+            <Text color={'#ffffff'} h1>
+              {title}
+            </Text>
+            <Text color={'#d4d4d4'} fontSize={24} center>
+              {subtitle}
+            </Text>
+
+            {credit && <Credit text={credit} />}
           </SectionHeader>
         </StyledBackgroundImage>
       )}
@@ -39,6 +46,7 @@ export default function Layout({ children, imageData, pageMapSections, subtitle,
 const Body = styled.div`
   background-color: ${colors.light};
   ${(props) => props.offsetTop && 'padding-top: 160px;'}
+  padding-bottom: 40px;
 `;
 
 const Content = styled.div`
@@ -59,6 +67,7 @@ const SectionHeader = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
 `;
 
 const SectionTitle = styled.h1`

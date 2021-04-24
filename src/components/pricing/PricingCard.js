@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import Text from 'components/Text';
 
-import { colors, shadows } from 'BaseTheme';
+import {colors, shadows} from 'BaseTheme';
 
-export default function PricingCard({ highlight, points, price, title }) {
+export default function PricingCard({highlight, points, price, title}) {
   return (
     <Card highlight={highlight}>
       <TitleContainer>
@@ -17,7 +17,7 @@ export default function PricingCard({ highlight, points, price, title }) {
       <PointsContainer>
         {points.map((point) => {
           return (
-            <Text margin="10px 0px" center>
+            <Text margin="10px 0px" center key={point}>
               {point}
             </Text>
           );

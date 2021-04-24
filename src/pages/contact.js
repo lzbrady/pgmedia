@@ -23,7 +23,7 @@ const Contact = () => (
       ]}
     />
 
-    <Text h1 center>Let's Make Something Great Together</Text>
+    <Text h1 center>Contact Us</Text>
 
     <ContactForm />
   </Layout>

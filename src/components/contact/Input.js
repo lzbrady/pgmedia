@@ -23,12 +23,13 @@ const StyledLabel = styled.label`
   color: ${colors.primaryDark};
   flex: 1;
   max-width: 100%;
+  font-family: 'Source Sans Pro';
 `;
 
 const StyledInput = styled((props) => <input {...props} />)`
   background-color: #edf2f4;
   border: none;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 8px;
   flex: 1;
   font-size: 14px;

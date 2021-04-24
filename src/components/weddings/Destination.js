@@ -1,17 +1,18 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import {graphql, useStaticQuery} from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import styled from 'styled-components';
 
+import Credit from 'components/Credit';
 import Text from 'components/Text';
 
-import { colors } from 'BaseTheme';
-import { SMALL_SCREEN_SIZE } from 'constants';
+import {colors} from 'BaseTheme';
+import {SMALL_SCREEN_SIZE} from 'constants';
 
 export default function Destination({}) {
   const data = useStaticQuery(graphql`
     query DestinationWedding {
-      image: file(relativePath: { eq: "beach.jpg" }) {
+      image: file(relativePath: {eq: "destination.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 2160) {
             ...GatsbyImageSharpFluid
@@ -23,20 +24,19 @@ export default function Destination({}) {
 
   return (
     <StyledBackgroundImage Tag="section" fluid={data.image.childImageSharp.fluid} backgroundColor={colors.primary}>
-      <ContentContainer>
+      <Credit text="Hermansyah" />
+      <ContentContainer id="travel">
         <TextContainer>
           <Text fontSize={36} center margin="0px auto 20px;">
             Destination Weddings
           </Text>
           <Text fontSize={18} margin="0px auto 20px;">
-            We love seeing new locations, and know you chose to have a destination wedding because you do too. Scenery
-            is very important to us, especially when shooting destinations. The scenery will play a huge role in your
-            film so we can fully capture the beauty of your selected destination.
+            We love seeing new locations, and know you chose to have a destination wedding because you do too. Scenery is very important to us, especially when shooting destinations. The scenery will
+            play a huge role in your film so we can fully capture the beauty of your selected destination.
           </Text>
           <Text fontSize={18}>
-            We only require travel to and from to be provided or compensated. The rest of the pricing remains consistent
-            with our packages above. We encourage asking far in advance, as destination weddings typically require more
-            time around the wedding itself.
+            We only require travel to and from to be provided or compensated. The rest of the pricing remains consistent with our packages above. We encourage asking far in advance, as destination
+            weddings typically require more time around the wedding itself.
           </Text>
         </TextContainer>
       </ContentContainer>
@@ -60,7 +60,7 @@ const ContentContainer = styled.div`
 `;
 
 const StyledBackgroundImage = styled((props) => <BackgroundImage {...props} />)`
-  height: 40vh;
+  padding: 40px 0px;
   width: calc(100% + 40px);
   margin-top: 120px;
 

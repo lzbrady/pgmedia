@@ -1,67 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 
 import Text from 'components/Text';
 
 export default function FilmTypes({}) {
-  const data = useStaticQuery(graphql`
-    query VideoTypesQuery {
-      commercials: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 125, height: 125) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-
-      promotions: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 125, height: 125) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-
-      documentaries: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 125, height: 125) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-
-      musicVideos: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 125, height: 125) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <Container>
       <VideoType>
-        <Img fixed={data.commercials.childImageSharp.fixed} />
-        <Text>Commercials</Text>
+        <Text h2 center>Promotions</Text>
       </VideoType>
 
       <VideoType>
-        <Img fixed={data.commercials.childImageSharp.fixed} />
-        <Text>Promotions</Text>
+        <Text h2 center>Ads</Text>
       </VideoType>
 
       <VideoType>
-        <Img fixed={data.commercials.childImageSharp.fixed} />
-        <Text>Documentaries</Text>
+        <Text h2 center>Music Videos</Text>
       </VideoType>
 
       <VideoType>
-        <Img fixed={data.commercials.childImageSharp.fixed} />
-        <Text>Music Videos</Text>
+        <Text h2 center>Short Films</Text>
+      </VideoType>
+
+      <VideoType>
+        <Text h2 center>Documentaries</Text>
+      </VideoType>
+
+      <VideoType>
+        <Text h2 center>Commercials</Text>
+      </VideoType>
+
+      <VideoType>
+        <Text h2 center>Whatever you want!</Text>
       </VideoType>
     </Container>
   );
@@ -76,9 +46,10 @@ const Container = styled.div`
 
 const VideoType = styled.div`
   flex: 1;
-  min-width: 125px;
+  min-width: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 `;

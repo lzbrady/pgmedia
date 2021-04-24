@@ -1,20 +1,20 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import {Link, graphql, useStaticQuery} from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
 
 import SEO from 'components/seo';
+import Text from 'components/Text';
 import LogoIcon from '@icons/logo.svg';
 
-import { colors } from 'BaseTheme';
-import { SMALL_SCREEN_SIZE } from 'constants';
+import {colors} from 'BaseTheme';
+import {SMALL_SCREEN_SIZE} from 'constants';
 
 export default function Index() {
   const data = useStaticQuery(graphql`
     query IndexBackgroundQuery {
-      indexBackground: file(relativePath: { eq: "hot-air-balloon.jpg" }) {
+      indexBackground: file(relativePath: {eq: "hot-air-balloon.jpg"}) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 4160) {
             ...GatsbyImageSharpFluid
@@ -34,35 +34,33 @@ export default function Index() {
           filter: 'grayscale(0.6)',
           height: '100vh',
           width: '100%',
-        }}
-      >
-        <Particles width="100%" height="40vh" style={{ position: 'absolute', top: 0, left: 0, right: 0 }} />
-        <SEO
-          title="PG Media"
-          keywords={[
-            `custom`,
-            `website`,
-            `graphics`,
-            `video`,
-            `production`,
-            `social`,
-            `media`,
-            `indiana`,
-            `indianapolis`,
-          ]}
-        />
+        }}>
+        <Particles width="100%" height="40vh" style={{position: 'absolute', top: 0, left: 0, right: 0}} />
+        <SEO title="PG Media" keywords={[`custom`, `website`, `graphics`, `video`, `production`, `social`, `media`, `indiana`, `indianapolis`]} />
         <ContentContainer>
-          <LogoContainer>
-            <LogoIcon width={160} height={160} />
-          </LogoContainer>
+          <Content>
+            <LogoContainer>
+              <LogoIcon width={160} height={160} />
+            </LogoContainer>
 
-          <Title>Pretty Good Media</Title>
-          <MenuOptions>
-            <MenuItemLink to="/weddings">Weddings</MenuItemLink>
-            <MenuItemLink to="/films">Films</MenuItemLink>
-            <MenuItemLink to="/about">About</MenuItemLink>
-            <MenuItemLink to="/contact">Contact</MenuItemLink>
-          </MenuOptions>
+            <Title>Pretty Good Media</Title>
+            <Text fontSize={18} light center>
+              Video Production in Boston, Massachusetts
+            </Text>
+
+            <MenuOptions>
+              <MenuItemLink to="/weddings">Weddings</MenuItemLink>
+              <MenuItemLink to="/films">Films</MenuItemLink>
+              <MenuItemLink to="/about">About</MenuItemLink>
+              <MenuItemLink to="/contact">Contact</MenuItemLink>
+            </MenuOptions>
+          </Content>
+
+          <Footer>
+            <Text light center>
+              © {new Date().getFullYear()} | Boston, MA
+            </Text>
+          </Footer>
         </ContentContainer>
       </StyledBackgroundImage>
     </Container>
@@ -74,18 +72,25 @@ const Container = styled.div`
   width: 100%;
 `;
 
+const Content = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+`;
+
 const ContentContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  justify-content: space-between;
 `;
 
-const Logo = styled((props) => <Img {...props} />)`
-  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.3);
-  border-radius: 160px;
-  background-color: black;
+const Footer = styled.div`
+  margin-bottom: 20px;
 `;
 
 const LogoContainer = styled.div`
@@ -127,6 +132,7 @@ const Title = styled.h1`
   color: white;
   font-size: 48px;
   font-family: 'Montserrat';
+  margin: 20px auto 10px;
 
   @media screen and (max-width: ${SMALL_SCREEN_SIZE}) {
     font-size: 28px;

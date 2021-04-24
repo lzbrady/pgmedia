@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import DatePicker from 'react-date-picker';
 
 import Button from 'components/Button';
 import Input from 'components/contact/Input';
+import Text from 'components/Text';
 
 import { colors } from 'BaseTheme';
+import * as contactStyles from 'contact.module.css';
 
 export default function ContactForm({}) {
+  const [date, setDate] = useState();
+
   return (
     <Container>
       <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
@@ -19,12 +24,19 @@ export default function ContactForm({}) {
           </InputGroup>
 
           <InputGroup>
-            <Input label="Email Address" type="email" name="email" />
+            <Input label="Email" type="email" name="email" />
           </InputGroup>
 
           <InputGroup>
             <Input label="Message" multiline name="message" />
           </InputGroup>
+
+          <DateGroup>
+            <Text fontSize={18} color={colors.primaryDark}>
+              Date (If Applicable)
+            </Text>
+            <DatePicker className={contactStyles.datePicker} onChange={setDate} value={date} />
+          </DateGroup>
         </FormContent>
 
         <Button dark text="Submit" containerStyle={{ margin: '40px auto 0px' }} />
@@ -55,6 +67,14 @@ const InputGroup = styled.div`
   display: flex;
   flex-direction: row;
   grid-gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+`;
+
+const DateGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  grid-gap: 5px;
   margin-top: 20px;
   flex-wrap: wrap;
 `;

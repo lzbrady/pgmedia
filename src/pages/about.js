@@ -47,7 +47,6 @@ export default function About({}) {
       <Tagline />
       <OurTeam />
       <Process />
-      {/* <Examples data={data?.allWeddingsJson?.nodes} /> */}
     </Layout>
   );
 }

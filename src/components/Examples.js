@@ -5,9 +5,9 @@ import Player from 'components/Player';
 import SectionHeader from 'components/SectionHeader';
 import Text from 'components/Text';
 
-import { colors } from 'BaseTheme';
+import {colors} from 'BaseTheme';
 
-export default function Examples({ data, title = 'See Our Work' }) {
+export default function Examples({data, title = 'See Our Work'}) {
   return (
     <Container id="work">
       <SectionHeader text={title} />
@@ -15,19 +15,11 @@ export default function Examples({ data, title = 'See Our Work' }) {
       <PlayersContainer>
         {data?.map((item, index) => {
           return (
-            <>
-              <Player
-                containerStyle={{ maxWidth: '640px' }}
-                border={index < data.length - 1}
-                key={item.url}
-                title={item.title}
-                description={item.description}
-                tags={item.tags}
-                url={item.url}
-              />
+            <React.Fragment key={item.title}>
+              <Player containerStyle={{maxWidth: '640px'}} border={index < data.length - 1} key={item.url} title={item.title} description={item.description} tags={item.tags} url={item.url} />
 
               {index < data.length - 1 && <Divider />}
-            </>
+            </React.Fragment>
           );
         })}
       </PlayersContainer>
@@ -36,7 +28,7 @@ export default function Examples({ data, title = 'See Our Work' }) {
 }
 
 const Container = styled.div`
-  margin-top: 200px;
+  margin-top: 120px;
   width: 100%;
 `;
 

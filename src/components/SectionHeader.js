@@ -5,9 +5,9 @@ import Text from 'components/Text';
 
 import { colors } from 'BaseTheme';
 
-export default function SectionHeader({ text }) {
+export default function SectionHeader({ text, id }) {
   return (
-    <Container>
+    <Container id={id}>
       <Text h1 color={colors.dark} fontSize={36}>
         {text}
       </Text>

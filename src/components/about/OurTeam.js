@@ -1,16 +1,16 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import {graphql, useStaticQuery} from 'gatsby';
 import styled from 'styled-components';
 
 import Text from 'components/Text';
 import TeamMember from 'components/about/TeamMember';
 
-import { colors } from 'BaseTheme';
+import {colors} from 'BaseTheme';
 
 export default function OurTeam({}) {
   const data = useStaticQuery(graphql`
     query OurTeam {
-      luke: file(relativePath: { eq: "luke.jpg" }) {
+      luke: file(relativePath: {eq: "luke.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 340) {
             ...GatsbyImageSharpFluid
@@ -18,7 +18,7 @@ export default function OurTeam({}) {
         }
       }
 
-      connor: file(relativePath: { eq: "connor.jpg" }) {
+      connor: file(relativePath: {eq: "connor.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 340) {
             ...GatsbyImageSharpFluid
@@ -26,7 +26,7 @@ export default function OurTeam({}) {
         }
       }
 
-      arica: file(relativePath: { eq: "arica.jpg" }) {
+      arica: file(relativePath: {eq: "arica.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 340) {
             ...GatsbyImageSharpFluid
@@ -69,7 +69,9 @@ const Container = styled.div`
 
 const TeamMembers = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 20px;
   justify-items: center;
+  max-width: 750px;
+  margin: 0px auto;
 `;
