@@ -52,6 +52,8 @@ const PricingContainer = styled.div`
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+  align-items: center;
+  grid-gap: 30px;
 
   @media screen and (max-width: ${SMALL_SCREEN_SIZE}) {
     flex-direction: column;

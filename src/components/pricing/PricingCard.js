@@ -38,8 +38,7 @@ const Card = styled.div`
   border-radius: 8px;
   flex: 1;
   align-items: center;
-  margin: 15px;
-  margin: ${(props) => (props.highlight ? '0px 15px 15px' : '25px')};
+  width: 100%;
   max-width: 275px;
   height: ${(props) => (props.highlight ? '325px' : '275px')};
   ${shadows.primary}
