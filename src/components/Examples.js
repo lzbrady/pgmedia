@@ -36,7 +36,7 @@ const Divider = styled.div`
   width: calc(100% - 20px);
   height: 1px;
   background-color: ${colors.alpha.accent.replace('x', 0.2)};
-  margin: 60px 10px;
+  margin: 20px 10px;
 `;
 
 const PlayersContainer = styled.div`

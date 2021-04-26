@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
 
-import Layout from 'layouts/layout';
+import Layout from 'layouts/Layout';
 import SEO from 'components/seo';
 
 import Destination from 'components/weddings/Destination';
