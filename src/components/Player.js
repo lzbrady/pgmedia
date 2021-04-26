@@ -53,7 +53,7 @@ const StyledReactPlayer = styled((props) => <ReactPlayer {...props} />)`
 
 const Tag = styled.p`
   border-radius: 26px;
-  background-color: ${colors.accent};
+  background-color: ${colors.primary};
   color: ${colors.light};
   padding: 3px 12px;
   margin: 10px 5px;

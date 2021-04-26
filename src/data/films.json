@@ -1,8 +1,14 @@
 [
   {
-    "title": "Adventuring San Fran | Arizona",
-    "description": "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    "url": "https://youtu.be/_1qFPSR193c",
-    "tags": ["Summer Vid", "Adventures"]
+    "title": "Google Home Commercial - Thriller",
+    "description": "An example of a collaborative Pretty Good Media / Google Home commercial, featuring it's ability to play Spotify. This was created by Pretty Good Media as an internal creative project, and has no affiliation with Google or Spotify.",
+    "url": "https://youtu.be/--FaWKwPOXk",
+    "tags": ["Short Film", "Commercial"]
+  },
+  {
+    "title": "Happy 5th Work Anniversary",
+    "description": "A young professional celebrates 5 years at his job. This was created by Pretty Good Media as an internal creative project.",
+    "url": "https://youtu.be/YKXDQuC00R0",
+    "tags": ["Short Film"]
   }
 ]
