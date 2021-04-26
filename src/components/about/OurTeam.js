@@ -46,17 +46,17 @@ export default function OurTeam({}) {
         <TeamMember
           name="Luke Brady"
           imageData={data.luke.childImageSharp.fluid}
-          bio="Luke started making videos during his middle school years on family vacations, and still captures his trips today. He finds passion in inspiring others. He leads with creativity and has the drive to bring it to life."
+          bio="Luke started making videos during his middle school years on family vacations, and still captures his trips today. He loves using video as a way to share his experiences with the world."
         />
         <TeamMember
           name="Connor Beauregard"
           imageData={data.connor.childImageSharp.fluid}
-          bio="Connor’s mind never slows down. Every day he has a new idea, but that doesn’t slow him from creating. He’s always figuring out new ways to bring his ideas to life."
+          bio="Connor always sees a place to add his creativity. Whether he's working on his own projects, or collaborating on another, he is consistently able to add his unique perspective."
         />
         <TeamMember
           name="Arica Bartee"
           imageData={data.arica.childImageSharp.fluid}
-          bio="Arica adds her originality to everything she does. She cares deeply about her projects, nailing down every little detail, while still able to convery the larger picture. She always has a vision and always delivers on it."
+          bio="Arica adds her originality to everything she does. She has a grand vision for each project she does, but still has the ability to nail down every last detail."
         />
       </TeamMembers>
     </Container>
