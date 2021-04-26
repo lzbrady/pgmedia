@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 import Text from 'components/Text';
 
-import { colors } from 'BaseTheme';
-import { MEDIUM_SCREEN_SIZE } from 'constants';
+import {colors} from 'BaseTheme';
+import {MEDIUM_SCREEN_SIZE} from 'constants';
 
-export default function Player({ containerStyle, description, title, tags, url }) {
+export default function Player({containerStyle, controls = true, description, title, tags, url}) {
   return (
     <Container style={containerStyle}>
       {title && (
@@ -18,7 +18,7 @@ export default function Player({ containerStyle, description, title, tags, url }
       {description && <Text margin="20px 0px">{description}</Text>}
 
       <PlayerContainer>
-        <StyledReactPlayer url={url} width={'100%'} height={'100%'} />
+        <StyledReactPlayer url={url} width={'100%'} height={'100%'} controls={controls} />
       </PlayerContainer>
 
       {tags && (
