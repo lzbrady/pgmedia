@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, useStaticQuery } from 'gatsby';
+import {Link, useStaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import SocialMediaIcons from 'components/SocialMediaIcons';
 
-import { colors } from 'BaseTheme';
-import { SMALL_SCREEN_SIZE } from 'constants';
+import {colors} from 'BaseTheme';
+import {SMALL_SCREEN_SIZE} from 'constants';
 
 export default function Footer({}) {
   return (
@@ -20,24 +20,20 @@ export default function Footer({}) {
         </Pages>
       </ContentContainer>
 
-      <SocialMediaIcons color={colors.primary} style={{ margin: 'auto' }} />
+      <SocialMediaIcons color={colors.primary} style={{margin: 'auto'}} />
 
-      <AuthorLink href="https://pgmediasolutions.com/" target="_blank">
+      <Author>
         Website created with ♥ by <strong>Pretty Good Media</strong>
-      </AuthorLink>
+      </Author>
     </Container>
   );
 }
 
-const AuthorLink = styled.a`
+const Author = styled.p`
   color: ${colors.primary};
   font-size: 12px;
   text-decoration: none;
   margin: 20px auto 5px;
-
-  :hover {
-    text-decoration: underline;
-  }
 `;
 
 const Container = styled.div`
